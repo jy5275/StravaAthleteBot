@@ -1,0 +1,97 @@
+{
+	"props": {
+		"pageProps": {
+			"fullPath": "https://www.strava.com/athletes/96951505",
+			"athleteId": 96951505,
+			"athleteData": {
+				"athlete": {
+					"id": 96951505,
+					"name": "Zack Wu",
+					"firstname": "Zack",
+					"location": "",
+					"primarySport": "athlete-runner"
+				},
+				"recentActivities": [
+					{
+						"id": 13884445800,
+						"name": "☁️ W498CS/4 Economy Run",
+						"type": "run",
+						"detailedType": "Run",
+						"startDateLocal": "Today",
+						"distance": "10.2 km",
+						"elevation": "29 m",
+						"movingTime": "59:40",
+						"images": [
+							{
+								"type": "map",
+								"primary": true,
+								"caption": "☁️ W498CS/4 Economy Run",
+								"defaultSrc": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/UYXS5XZ3N3JUJDO4UFCCZ24EJIEKM2PO6IGLW7VYJ2BJFMBXCJE24RDKNIILO2QJZWXRHF5P43B3CJAUM6V25TRHLS5QGOET55NA====",
+								"squareSrc": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/AY6TGRKS2LQ5G3U6KAM7LIU2FLAYNSEPXH5UKYLAUJVHHIBTJGWJ4AF27TQ53DO37XL4FUY3RMQUBLG4TJIZWZJ3TTSP4WYR23KA===="
+							}
+						],
+						"isManual": false,
+						"hasGps": true
+					},
+					{
+						"id": 13876261222,
+						"name": "☁️ W497CN/1 Tabata Run",
+						"type": "run",
+						"detailedType": "Run",
+						"startDateLocal": "Yesterday",
+						"distance": "9.8 km",
+						"elevation": "24 m",
+						"movingTime": "56:03",
+						"images": [
+							{
+								"type": "map",
+								"primary": true,
+								"caption": "☁️ W497CN/1 Tabata Run",
+								"defaultSrc": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/BRCTXUGUC3ASLYZRDLPVBTOFSCG6DBANUBXRJOCVXXJEYKWEEIHVD6JVXKJHZJJU2AG6TDM74C24I4U3FDHA2ICU3VCQT2ZF6FUA====",
+								"squareSrc": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/WLLBRZN6GPC4NI26RT3JNVF7NAFXWGOJTPOC2ZWTIIGYLOEYNH7JMR37CDWNMIVHIQVYBS5VZA5KKBSLGDDVTKKQSHKZC7RBAZQQ===="
+							}
+						],
+						"isManual": false,
+						"hasGps": true
+					},
+					{
+						"id": 13861508166,
+						"name": "Evening Weight Training",
+						"type": "workout",
+						"detailedType": "WeightTraining",
+						"startDateLocal": "March 13, 2025",
+						"distance": "0 km",
+						"elevation": "0 m",
+						"movingTime": "53:52",
+						"images": [
+						],
+						"isManual": false,
+						"hasGps": false
+					}
+				],
+				"stats": {
+					"monthlyDistance": "141.2 km",
+					"monthlyTime": "15:53:00",
+					"chartData": [
+						{
+							"month": "2025-02-01",
+							"miles": 183.919,
+							"hours": 24.754722222222224,
+							"elev_gain": 500
+						},
+						{
+							"month": "2025-03-01",
+							"miles": 141.296,
+							"hours": 15.883333333333333,
+							"elev_gain": 450
+						}
+					]
+				}
+			}
+		}
+	},
+	"page": "/athletes/[id]",
+	"query": {
+		"id": "96951505"
+	}
+}

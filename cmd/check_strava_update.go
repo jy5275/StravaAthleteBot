@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	lambda.Start(common.HandleCheckStravaActivityUpdate)
+	lambda.Start(common.HandleCheckStravaActivityUpdateV2)
 }

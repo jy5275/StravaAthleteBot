@@ -1,0 +1,93 @@
+{
+  "props": {
+    "pageProps": {
+      "url": "/activities/13884445800",
+      "host": "www.strava.com",
+      "protocol": "https",
+      "fullPath": "https://www.strava.com/activities/13884445800",
+      "activity": {
+        "id": "13884445800",
+        "activityKind": {
+          "sportType": "Run"
+        },
+        "mapImages": [
+          {
+            "url": "https://d3o5xota0a1fcr.cloudfront.net/v6/maps/EQCGWGEWXIWUYJJEQBBE3XWI552OTK7E34JYE3BONIB6T7AHFWGENUD25KLIS4AW55HEHMAUZAFQYUHPRPVDGZI="
+          }
+        ],
+        "athlete": {
+          "id": "96951505",
+          "firstName": "Zack",
+          "lastName": "Wu",
+          "location": {
+            "city": "Singapore",
+            "country": "",
+            "state": ""
+          },
+          "activities": {
+            "nodes": [
+              {
+                "id": "13884445800",
+                "name": "☁️ W498CS/4 Economy Run",
+                "activityKind": {
+                  "sportType": "Run"
+                },
+                "startLocal": "2025-03-15T06:50:19",
+                "highlightedMedia": null
+              },
+              {
+                "id": "13876261222",
+                "name": "☁️ W497CN/1 Tabata Run",
+                "activityKind": {
+                  "sportType": "Run"
+                },
+                "startLocal": "2025-03-14T06:44:46",
+                "highlightedMedia": null
+              },
+              {
+                "id": "13861508166",
+                "name": "Evening Weight Training",
+                "activityKind": {
+                  "sportType": "WeightTraining"
+                },
+                "startLocal": "2025-03-12T20:09:23",
+                "highlightedMedia": null
+              },
+              {
+                "id": "13857417035",
+                "name": "☁️ W495CK/2 Progression Run",
+                "activityKind": {
+                  "sportType": "Run"
+                },
+                "startLocal": "2025-03-12T06:44:45",
+                "highlightedMedia": null
+              },
+              {
+                "id": "13847637424",
+                "name": "☁️ W494CK/4 Economy Run",
+                "activityKind": {
+                  "sportType": "Run"
+                },
+                "startLocal": "2025-03-11T06:46:31",
+                "highlightedMedia": null
+              }
+            ]
+          },
+          "profileImageUrl": "https://dgalywyr863hv.cloudfront.net/pictures/athletes/96951505/34952487/2/large.jpg"
+        },
+        "description": "Warm, cloudy, 26°C, Feels like 32°C, Humidity 91%, Precipitation dry, Dew point 24°C, Singapore 🇸🇬\n\nBase, Aerobic 3.6, Anaerobic 0, Load 154",
+        "name": "☁️ W498CS/4 Economy Run",
+        "scalars": {
+          "distance": 10286.3,
+          "elevationGain": 29,
+          "movingTime": 3580
+        },
+        "startLocal": "2025-03-15T06:50:19"
+      }
+    }
+  },
+  "page": "/activities/[id]",
+  "query": {
+    "id": "13884445800"
+  }
+}

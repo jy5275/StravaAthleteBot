@@ -99,7 +99,7 @@ func InsertActivityRecord(userID string, activityID string) error {
 	return nil
 }
 
-func GetUserActivityHistoryList(userID string) (map[string]bool, error) {
+func GetAthleteActivityHistoryList(userID string) (map[string]bool, error) {
 	if svc == nil {
 		initDDBSvc()
 	}
