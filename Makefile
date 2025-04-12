@@ -13,7 +13,7 @@ build: cmd/*.go common/*
 
 push:
 	echo "push to lambda..."
-	aws lambda update-function-code --function-name checkStravaUpdate --zip-file fileb://$(chk_strava_pack)
+	aws lambda update-function-code --function-name check-strava-update --zip-file fileb://$(chk_strava_pack)
 
 test:
 	cd common && go test ./... -v
