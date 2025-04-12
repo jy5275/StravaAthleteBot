@@ -5,10 +5,34 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"strconv"
 	"strings"
 
 	"golang.org/x/net/html"
 )
+
+type Activity struct {
+	Date     string
+	Duration string
+	Type     string `json:"type"`
+
+	DateTime     string // v2 format: 2025-03-15T06:50:19
+	Pace         string
+	ID           int64  `json:"id"`
+	Name         string `json:"name"`
+	DetailedType string `json:"detailedType"`
+	Distance     string `json:"distance"`
+	Elevation    string `json:"elevation"`
+	MovingTime   string `json:"movingTime"`
+}
+
+type Athlete struct {
+	ID               int64       `json:"id"`
+	Name             string      `json:"name"`
+	RecentActivities []*Activity `json:"recentActivities"`
+	MonthlyDistance  string      `json:"monthlyDistance"`
+	MonthlyTime      string      `json:"monthlyTime"`
+}
 
 func ExtractAthleteDetailFromResp(body io.ReadCloser) (*Athlete, error) {
 	rawJSON, err := extractNextDataJSONFromResp(body)
@@ -80,6 +104,38 @@ func parseActivity(jsonStr string) (string, error) {
 	}
 
 	return rawData.Props.PageProps.Activity.StartLocal, nil
+}
+
+func calculatePace(duration string, distance string) string {
+	distance = strings.TrimSpace(strings.Replace(distance, "km", "", -1))
+	durationParts := strings.Split(duration, ":")
+
+	if len(durationParts) != 2 && len(durationParts) != 3 {
+		return "N/A"
+	}
+
+	var totalSeconds int
+	if len(durationParts) == 3 {
+		hours, _ := strconv.Atoi(durationParts[0])
+		minutes, _ := strconv.Atoi(durationParts[1])
+		seconds, _ := strconv.Atoi(durationParts[2])
+		totalSeconds = hours*3600 + minutes*60 + seconds
+	} else {
+		minutes, _ := strconv.Atoi(durationParts[0])
+		seconds, _ := strconv.Atoi(durationParts[1])
+		totalSeconds = minutes*60 + seconds
+	}
+
+	dist, err := strconv.ParseFloat(distance, 64)
+	if err != nil || dist == 0 {
+		return "N/A"
+	}
+
+	paceSeconds := int(float64(totalSeconds) / dist)
+	minutes := paceSeconds / 60
+	seconds := paceSeconds % 60
+
+	return fmt.Sprintf("%d:%02d/km", minutes, seconds)
 }
 
 func parseAthlete(jsonStr string) (*Athlete, error) {

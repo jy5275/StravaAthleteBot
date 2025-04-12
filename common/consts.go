@@ -8,10 +8,11 @@ import (
 )
 
 const (
-	TG_OPENAPI_URL      = "https://api.telegram.org/bot"
-	STRAVA_ATHLETE_URL  = "https://www.strava.com/athletes/"
-	STRAVA_ACTIVITY_URL = "https://www.strava.com/activities/"
-	MAX_NICKNAME_LEN    = 12
+	TG_OPENAPI_URL           = "https://api.telegram.org/bot"
+	STRAVA_ATHLETE_URL       = "https://www.strava.com/athletes/"
+	STRAVA_ACTIVITY_URL      = "https://www.strava.com/activities/"
+	MAX_NICKNAME_LEN         = 12
+	DDB_STRAVA_ID_TABLE_NAME = "strava_id"
 )
 
 var (

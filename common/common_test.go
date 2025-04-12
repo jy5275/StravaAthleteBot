@@ -20,14 +20,6 @@ func TestGetAthleteActivityHistoryList(t *testing.T) {
 	}
 }
 
-func TestQueryAthlete(t *testing.T) {
-	ac, err := QueryAthlete("96951505")
-	if err != nil {
-		t.Errorf("failed, %s", err)
-	}
-	t.Log(ac)
-}
-
 func TestQueryActivity(t *testing.T) {
 	datetime, err := QueryActivityDateTime(13884445800)
 	if err != nil {
@@ -36,8 +28,8 @@ func TestQueryActivity(t *testing.T) {
 	t.Log(datetime)
 }
 
-func TestQueryAthleteV2(t *testing.T) {
-	ath, err := QueryAthleteV2("96951505")
+func TestQueryAthlete(t *testing.T) {
+	ath, err := QueryAthlete("96951505")
 	if err != nil {
 		t.Errorf("failed, %s", err)
 	}

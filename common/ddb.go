@@ -41,9 +41,8 @@ func GetStravaUserIDFromDDB(cmd string) (string, string, string, error) {
 	if svc == nil {
 		initDDBSvc()
 	}
-	tableName := "red_book_profile"
 	result, err := svc.GetItem(&dynamodb.GetItemInput{
-		TableName: aws.String(tableName),
+		TableName: aws.String(DDB_STRAVA_ID_TABLE_NAME),
 		Key: map[string]*dynamodb.AttributeValue{
 			"nickname": {
 				S: aws.String(strings.ToLower(nickname)),
@@ -58,10 +57,9 @@ func GetStravaUserIDFromDDB(cmd string) (string, string, string, error) {
 	}
 
 	type Item struct {
-		Nickname   string
-		Profile_id string
-		Real_name  string
-		Strava_id  string
+		Nickname  string
+		Real_name string
+		Strava_id string
 	}
 	var res Item
 	err = dynamodbattribute.UnmarshalMap(result.Item, &res)

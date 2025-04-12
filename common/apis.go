@@ -21,22 +21,7 @@ func QueryActivityDateTime(activityID int64) (string, error) {
 	return ExtractActivityDateTimeFromResp(resp.Body)
 }
 
-func QueryAthlete(userID string) ([]Activity, error) {
-	url := STRAVA_ATHLETE_URL + userID
-	resp, err := http.Get(url)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusOK {
-		log.Fatalf("Failed to fetch page, status code: %d", resp.StatusCode)
-	}
-
-	return extract(resp.Body)
-}
-
-func QueryAthleteV2(userID string) (*Athlete, error) {
+func QueryAthlete(userID string) (*Athlete, error) {
 	url := STRAVA_ATHLETE_URL + userID
 	resp, err := http.Get(url)
 	if err != nil {
